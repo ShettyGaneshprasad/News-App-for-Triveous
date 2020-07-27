@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:newsapp/newsfeed/newsfeed.dart';
-import 'package:newsapp/newsfeed/newsfeed.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -16,7 +15,7 @@ class _HomePageState extends State<HomePage>
   TabController controller;
   void initState() {
     super.initState();
-    controller = new TabController(length: 2, vsync: this);
+    controller = new TabController(length: 4, vsync: this);
   }
 
   @override
@@ -53,32 +52,48 @@ class _HomePageState extends State<HomePage>
     return TabBar(
       tabs: [
         Tab(
-          child: Flexible(
-              child: Text(
-            "CNN",
-            textAlign: TextAlign.center,
-          )),
+          child: Column(
+            children: <Widget>[
+              Flexible(
+                  child: Text(
+                "CNN",
+                textAlign: TextAlign.center,
+              )),
+            ],
+          ),
         ),
         Tab(
-          child: Flexible(
-              child: Text(
-            "Google News",
-            textAlign: TextAlign.center,
-          )),
+          child: Column(
+            children: <Widget>[
+              Flexible(
+                  child: Text(
+                "Google News",
+                textAlign: TextAlign.center,
+              )),
+            ],
+          ),
         ),
         Tab(
-          child: Flexible(
-              child: Text(
-            "New York Post",
-            textAlign: TextAlign.center,
-          )),
+          child: Column(
+            children: <Widget>[
+              Flexible(
+                  child: Text(
+                "New York Post",
+                textAlign: TextAlign.center,
+              )),
+            ],
+          ),
         ),
         Tab(
-          child: Flexible(
-              child: Text(
-            "Fox News",
-            textAlign: TextAlign.center,
-          )),
+          child: Column(
+            children: <Widget>[
+              Flexible(
+                  child: Text(
+                "Fox News",
+                textAlign: TextAlign.center,
+              )),
+            ],
+          ),
         ),
       ],
     );
